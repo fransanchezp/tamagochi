@@ -1,0 +1,98 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 100px); 
+    grid-template-rows: repeat(10, 100px);
+    gap: 5px; 
+    position: relative;
+}
+
+.tile {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted #000000;
+}
+
+.bush {
+    background-color: #2d5a27;
+}
+
+.player {
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    z-index: 2;
+    background-image: url('../img/goku.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+.controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.move-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.move-buttons button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.move-buttons button:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+.move-buttons button:active {
+    transform: scale(0.95);
+}
+
+.rotate-btn, .shoot-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rotate-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.shoot-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.rotate-btn:hover, .shoot-btn:hover {
+    transform: scale(1.1);
+}
+
+.rotate-btn:active, .shoot-btn:active {
+    transform: scale(0.95);
+}
